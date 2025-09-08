@@ -4,7 +4,7 @@ import '../bloc/todo_bloc.dart';
 import '../bloc/todo_event.dart';
 import '../bloc/todo_state.dart';
 import '../model/todo_model.dart';
-import '../widget/todo_list.dart';
+import '../widget/todo_list_widget.dart';
 import 'package:uuid/uuid.dart';
 
 class TodoPage extends StatelessWidget {
@@ -51,7 +51,7 @@ class TodoPage extends StatelessWidget {
           Expanded(
             child: BlocBuilder<TodoBloc, TodoState>(
               builder: (context, state) {
-                return TodoList(todos: state.todos);
+                return TodoListWidget(todos: state.todos);
               },
             ),
           )
