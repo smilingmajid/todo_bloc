@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iconsax/iconsax.dart';
 import '../bloc/todo_bloc.dart';
 import '../bloc/todo_event.dart';
 import '../model/todo_model.dart';
@@ -29,7 +30,7 @@ class TodoListWidget extends StatelessWidget {
             },
           ),
           trailing: IconButton(
-            icon: const Icon(Icons.delete, color: Colors.red),
+            icon: const Icon(Iconsax.trash, color: Colors.red),
             onPressed: () {
               context.read<TodoBloc>().add(DeleteTodo(todo.id));
             },
